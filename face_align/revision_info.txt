@@ -1,0 +1,7 @@
+arguments: train.py
+--------------------
+tensorflow version: 2.5.2
+--------------------
+git hash: b'd2b37bd3115dad5e51711aae2243a6a1991b1870'
+--------------------
+b"diff --git a/align/detect_face.py b/align/detect_face.py\nindex 797d4fe..ec17a01 100644\n--- a/align/detect_face.py\n+++ b/align/detect_face.py\n@@ -710,7 +710,7 @@ def nms(boxes, threshold, method):\n         w = np.maximum(0.0, xx2-xx1+1)\n         h = np.maximum(0.0, yy2-yy1+1)\n         inter = w * h\n-        if method is 'Min':\n+        if method == 'Min':\n             o = inter / np.minimum(area[i], area[idx])\n         else:\n             o = inter / (area[i] + area[idx] - inter)\ndiff --git a/requirements.txt b/requirements.txt\nindex dafc8a0..bbc857a 100644\n--- a/requirements.txt\n+++ b/requirements.txt\n@@ -1,4 +1,4 @@\n-tensorflow<2.0\n+tensorflow\n scipy==1.1.0\n scikit-learn\n opencv-python"
